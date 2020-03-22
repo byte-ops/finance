@@ -3,13 +3,13 @@
 
 /* Calculate future value
  * pv: Present Value
- * interest: rate
+ * rate: rate at which investment grows
  * periods: number of compounding periods per year
  * years: years of investment  */
-double FV(double pv, float interest, int periods, int years)
+double _FV(double pv, double rate, int periods, int years)
 {
 	double k = periods * years;
-	double y = 1.0L + (interest / years);
+	double y = 1.0L + (rate / years);
 	return pv * pow(y, k);
 }
 
